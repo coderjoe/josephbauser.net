@@ -1,0 +1,66 @@
+body
+  background-color: #EEEEFF
+  font:
+    size: 12pt
+
+=bigshadow
+  text-shadow: 0px 2px 3px #555
+
+=shadow
+  text-shadow: 0px 1px 2px #555
+
+=roundedbox(!radius)
+  -moz-border-radius= !radius
+
+=roundedcorners(!topright,!bottomright,!topleft,!bottomleft)
+  -moz-border-radius:
+    topright= !topright
+    bottomright= !bottomright
+    topleft= !topleft
+    bottomleft= !bottomleft
+
+=roundedcorners(!radius)
+  +roundedcorners(!radius,!radius,!radius,!radius)
+
+=insetboxshadow(!xoff, !yoff, !blur, !color)
+  -moz-box-shadow= "inset "+!xoff+" "+!yoff+" "+!blur+" "+!color
+
+=boxshadow(!xoff, !yoff, !blur, !color)
+  -moz-box-shadow= !xoff !yoff !blur !color
+
+#header
+  +bigshadow
+  margin:
+    top: 30px
+    bottom: 30px
+  text-align: center
+  font:
+    size: 42pt
+    weight: bold
+  .first
+    color: lightblue
+  .last
+    color: darkblue
+
+#content
+  .content
+    padding-top: 25px
+
+.heading
+  text-align: center
+  font:
+    size: 18pt
+    weight: bold
+  border:
+    bottom: 1px inset #222
+  +shadow
+
+.insetbox
+  background-color: white
+  +roundedbox(3px)
+  +insetboxshadow(0px,0px,5px,grey)
+
+#footer
+  text-align: center
+  font:
+    size: 6pt

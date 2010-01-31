@@ -1,0 +1,34 @@
+body {
+  background-color: #EEEEFF;
+  font-size: 12pt; }
+
+#header {
+  text-shadow: 0px 2px 3px #555;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 42pt;
+  font-weight: bold; }
+  #header .first {
+    color: lightblue; }
+  #header .last {
+    color: darkblue; }
+
+#content .content {
+  padding-top: 25px; }
+
+.heading {
+  text-align: center;
+  font-size: 18pt;
+  font-weight: bold;
+  border-bottom: 1px inset #222;
+  text-shadow: 0px 1px 2px #555; }
+
+.insetbox {
+  background-color: white;
+  -moz-border-radius: 3px;
+  -moz-box-shadow: inset 0px 0px 5px grey; }
+
+#footer {
+  text-align: center;
+  font-size: 6pt; }

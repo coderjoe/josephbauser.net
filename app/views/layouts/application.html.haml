@@ -1,0 +1,18 @@
+!!! xml
+!!!
+%html
+  %head
+    %title 
+      Title goes here!
+    = stylesheet_link_tag 'blueprint/screen', :media => 'screen'
+    = stylesheet_link_tag 'blueprint/print', :media => 'print'
+    /[if IE]
+      = stylesheet_link_tag 'blueprint/ie'
+    = stylesheet_link_tag 'custom'
+  %body
+    .container
+      #header.span-24.last.bigshadow<
+        %span.first> Joseph
+        %span.last> Bauser
+      #content.span-24.last
+        = yield
