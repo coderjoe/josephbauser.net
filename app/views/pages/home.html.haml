@@ -1,26 +1,23 @@
 #thingsilike.insetbox.span-8
-  .heading Things I Like
-  .content
-    %ul 
-      %li Programming
-      %li Simplicity
-      %li Acoustic Guitar
-      %li Cooking
+  %h2 Things I Like
+  %ul 
+    %li Programming
+    %li Simplicity
+    %li Acoustic Guitar
+    %li Cooking
 #thingsido.insetbox.span-8
-  .heading Things I do
-  .content
-    %ul
-      %li Ruby on Rails
-      %li Javascript
-      %li SQL
-      %li Android*
+  %h2 Things I do
+  %ul
+    %li= link_to 'Ruby on Rails', 'http://rubyonrails.org'
+    %li= link_to 'Android*','http://developer.android.com/index.html'
+    %li Javascript
+    %li SQL
 #findme.insetbox.span-8.last
-  .heading Find me!
-  .content
-    %ul
-      %li Resume
-      %li Blog
-      %li Twitter
-      %li E-Mail
+  %h2 Find me!
+  %ul
+    %li= link_to 'Resume', 'http://www.linkedin.com/in/josephbauser'
+    %li= link_to 'Blog', 'http://www.coderjoe.net'
+    %li= link_to 'Twitter', 'http://www.twitter.com/coderjoe'
+    %li= mail_to 'coderjoe@coderjoe.net', 'E-Mail', { :encode => 'hex', :subject => 'I found you via josephbauser.net!' }
 #footer.span-24.last
   * I am currently learning the Android SDK.

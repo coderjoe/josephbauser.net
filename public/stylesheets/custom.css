@@ -2,27 +2,40 @@ body {
   background-color: #EEEEFF;
   font-size: 12pt; }
 
+a {
+  color: blue; }
+  a:link {
+    text-decoration: none; }
+  a:hover {
+    color: blue;
+    text-shadow: 0px 0px 3px #777777; }
+
 #header {
   text-shadow: 0px 2px 3px #555;
   margin-top: 30px;
   margin-bottom: 30px;
   text-align: center;
-  font-size: 42pt;
+  font-size: 48pt;
   font-weight: bold; }
   #header .first {
     color: lightblue; }
   #header .last {
     color: darkblue; }
 
-#content .content {
-  padding-top: 25px; }
-
-.heading {
+#content h2 {
   text-align: center;
-  font-size: 18pt;
+  font-size: 19.2pt;
   font-weight: bold;
   border-bottom: 1px inset #222;
-  text-shadow: 0px 1px 2px #555; }
+  text-shadow: 0px 1px 2px #555555; }
+#content ul {
+  margin: 0px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 0px;
+  list-style: none; }
+  #content ul li {
+    text-align: center; }
 
 .insetbox {
   background-color: white;
