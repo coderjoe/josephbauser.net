@@ -3,16 +3,18 @@
 %html
   %head
     %title 
-      Title goes here!
+      josephbauser.net
     = stylesheet_link_tag 'blueprint/screen', :media => 'screen'
     = stylesheet_link_tag 'blueprint/print', :media => 'print'
     /[if IE]
       = stylesheet_link_tag 'blueprint/ie'
+      = stylesheet_link_tag 'ie-custom'
     = stylesheet_link_tag 'custom'
   %body
     .container
-      %h1#header.span-24.last.bigshadow<
-        %span.first> Joseph
-        %span.last> Bauser
+      %h1#header.span-24.last<
+      %h1#header.span-24.last<
+        %span.firstname> Joseph
+        %span.lastname> Bauser
       #content.span-24.last
         = yield

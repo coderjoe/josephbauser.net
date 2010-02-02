@@ -1,2 +1,4 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+/*$(document).ready( function() {
+	$('.firstname').dropShadow({'top':-155,'left':-155});
+	$('.lastname').dropShadow({'top':-150,'left':-155});
+} );*/

@@ -8,6 +8,7 @@ body
 =bigshadow
   text-shadow: 0px 2px 3px #555
 
+
 =shadow(!xoff = 0px, !yoff = 1px, !blur = 2px, !color = #555)
   text-shadow= !xoff+" "+ !yoff+" "+ !blur+" "+ !color
 
@@ -22,10 +23,9 @@ body
   box-shadow= "inset "+!xoff+" "+!yoff+" "+!blur+" "+!color
 
 a
-  &:link
-    color: #00A
-    +shadow(0px, 2px, 0px, #BBB)
-    text-decoration: none
+  color: #00A
+  +shadow(0px, 1px, 0px, #BBB)
+  text-decoration: none
   &:hover
     text-decoration: underline
 
@@ -38,9 +38,9 @@ a
   font:
     size= !basefont * 4
     weight: bold
-  .first
+  .firstname
     color: lightblue
-  .last
+  .lastname
     color: darkblue
 
 #content
@@ -65,7 +65,7 @@ a
 .insetbox
   background-color: white
   +roundedbox(3px)
-  +insetboxshadow(0px,1px,5px,grey)
+  +insetboxshadow(0px,1px,5px,"grey")
 
 #footer
   text-align: center
