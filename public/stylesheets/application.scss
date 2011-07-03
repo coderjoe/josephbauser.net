@@ -25,7 +25,13 @@ a {
 .content {
     background-color: #FFBA45;
     border-bottom: 1px solid #FFCF7D;
-    padding-bottom: 40px;
+}
+
+.projects {
+  border-top: 1px solid #A66900;
+  margin-top: 15px;
+  min-height: 250px;
+  background-color: #FFCF7D;
 }
 
 .footer {
@@ -48,7 +54,8 @@ a {
 
 .about {
     width: 480px;
-    padding-top: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     margin-left: auto;
     margin-right: auto;
 
@@ -76,19 +83,27 @@ a {
     span {
         padding: 3px 10px;
         font-size: 12pt;
-        background-color: #FFCF7D;
         display: inline-block;
 
         -webkit-border-radius: 20px;
         -moz-border-radius: 20px;
         border-radius: 20px;
 
-        -webkit-box-shadow: inset 0px 0px 4px 0px #A66900;
-        -moz-box-shadow: inset 0px 0px 4px 0px #A66900;
-        box-shadow: inset 0px 0px 4px 0px #A66900;
+        &.selected {
+            background-color: #FFCF7D;
+            -webkit-box-shadow: inset 0px 0px 4px 0px #A66900;
+            -moz-box-shadow: inset 0px 0px 4px 0px #A66900;
+            box-shadow: inset 0px 0px 4px 0px #A66900;
+        }
 
         &:hover {
-            background-color: #A66900;
+            background-color: #FFCF7D;
+            -webkit-box-shadow: inset 0px 0px 4px 0px #A66900;
+            -moz-box-shadow: inset 0px 0px 4px 0px #A66900;
+            box-shadow: inset 0px 0px 4px 0px #A66900;
+        }
+
+        &:active {
             -webkit-box-shadow: inset 0px 0px 4px 0px black;
             -moz-box-shadow: inset 0px 0px 4px 0px black;
             box-shadow: inset 0px 0px 4px 0px black;
