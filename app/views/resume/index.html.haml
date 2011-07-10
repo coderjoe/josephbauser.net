@@ -1,8 +1,10 @@
-.buttons
-  %span
-    %a{:href=>'/'} Info
-  %span.selected
-    %a{:href=>'resume'} Resume
-  %span
-    %a{:href=>'vcard'} vCard
+= render :partial => 'shared/navigation'
 .resume
+  %h2 Summary
+  .summary= @summary
+  %h2 Objective
+  .objective= @objective
+  %h2 Work Experience
+  .experience
+    .work
+      = render :partial => 'work_experience', :locals => { :experience => @work_experience }

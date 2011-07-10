@@ -28,8 +28,55 @@ a {
   background-color: #A66900;
   border-top: 1px solid #BF8A30;
   text-align: center; }
+  .footer ul {
+    height: 75px;
+    padding: 7px;
+    display: inline-block;
+    background-color: #BF8A30;
+    text-align: center;
+    margin-top: 20px;
+    list-style-type: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0px 0px 5px 3px #8C5700;
+    -moz-box-shadow: inset 0px 0px 5px 3px #8C5700;
+    box-shadow: inset 0px 0px 5px 3px #8C5700; }
+    .footer ul li {
+      display: inline-block;
+      width: 75px;
+      height: 75px;
+      margin-left: 10px; }
+      .footer ul li:first-child {
+        margin-left: 0px; }
+      .footer ul li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-position: 0px 0px;
+        background: url(/images/icons.png) no-repeat; }
+        .footer ul li a#googleplus {
+          background-position: 0px 0px; }
+          .footer ul li a#googleplus:hover {
+            background-position: 0px -75px; }
+        .footer ul li a#linkedin {
+          background-position: -75px 0px; }
+          .footer ul li a#linkedin:hover {
+            background-position: -75px -75px; }
+        .footer ul li a#twitter {
+          background-position: -150px 0px; }
+          .footer ul li a#twitter:hover {
+            background-position: -150px -75px; }
+        .footer ul li a#github {
+          background-position: -225px 0px; }
+          .footer ul li a#github:hover {
+            background-position: -225px -75px; }
+        .footer ul li a#email {
+          background-position: -300px 0px; }
+          .footer ul li a#email:hover {
+            background-position: -300px -75px; }
 
-.title {
+.header .title {
   font-family: 'Permanent Marker', arial, serif;
   padding-top: 4%;
   line-height: 50pt;
@@ -80,50 +127,16 @@ a {
       -moz-box-shadow: inset 0px 0px 4px 0px black;
       box-shadow: inset 0px 0px 4px 0px black; }
 
-ul {
-  height: 75px;
-  padding: 7px;
-  display: inline-block;
-  background-color: #BF8A30;
-  text-align: center;
-  margin-top: 20px;
-  list-style-type: none;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: inset 0px 0px 5px 3px #8C5700;
-  -moz-box-shadow: inset 0px 0px 5px 3px #8C5700;
-  box-shadow: inset 0px 0px 5px 3px #8C5700; }
-  ul li {
-    display: inline-block;
-    width: 75px;
-    height: 75px;
-    margin-left: 10px; }
-    ul li:first-child {
-      margin-left: 0px; }
-    ul li a {
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-position: 0px 0px;
-      background: url(/images/icons.png) no-repeat; }
-      ul li a#googleplus {
-        background-position: 0px 0px; }
-        ul li a#googleplus:hover {
-          background-position: 0px -75px; }
-      ul li a#linkedin {
-        background-position: -75px 0px; }
-        ul li a#linkedin:hover {
-          background-position: -75px -75px; }
-      ul li a#twitter {
-        background-position: -150px 0px; }
-        ul li a#twitter:hover {
-          background-position: -150px -75px; }
-      ul li a#github {
-        background-position: -225px 0px; }
-        ul li a#github:hover {
-          background-position: -225px -75px; }
-      ul li a#email {
-        background-position: -300px 0px; }
-        ul li a#email:hover {
-          background-position: -300px -75px; }
+.resume {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  .resume .experience .job {
+    padding-top: 30px; }
+    .resume .experience .job .time {
+      float: right; }
+      .resume .experience .job .time .start:after {
+        content: ' - '; }
+    .resume .experience .job .title {
+      font-weight: bold; }
+    .resume .experience .job .employer {
+      font-weight: bold; }

@@ -35,21 +35,97 @@ a {
 }
 
 .footer {
-    width: 100%;
-    background-color: #A66900;
-    border-top: 1px solid #BF8A30;
-    text-align: center;
+  width: 100%;
+  background-color: #A66900;
+  border-top: 1px solid #BF8A30;
+  text-align: center;
 
+  ul {
+      height: 75px;
+      padding: 7px;
+      display: inline-block;
+      background-color: #BF8A30;
+      text-align: center;
+      margin-top: 20px;
+      list-style-type: none;
+
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+
+      -webkit-box-shadow: inset 0px 0px 5px 3px #8C5700;
+      -moz-box-shadow: inset 0px 0px 5px 3px #8C5700;
+      box-shadow: inset 0px 0px 5px 3px #8C5700;
+
+      li {
+          display: inline-block;
+          width: 75px;
+          height: 75px;
+          margin-left: 10px;
+
+          &:first-child {
+              margin-left: 0px;
+          }
+
+          a {
+              display: block;
+              width: 100%;
+              height: 100%;
+              background-position: 0px 0px;
+              background: url(/images/icons.png) no-repeat;
+
+
+              &#googleplus {
+                  background-position: 0px 0px;
+                  &:hover {
+                      background-position: 0px -75px;
+                  }
+              }
+
+              &#linkedin {
+                  background-position: -75px 0px;
+                  &:hover {
+                      background-position: -75px -75px;
+                  }
+              }
+
+              &#twitter {
+                  background-position: -150px 0px;
+                  &:hover {
+                      background-position: -150px -75px;
+                  }
+              }
+
+              &#github {
+                  background-position: -225px 0px;
+                  &:hover {
+                      background-position: -225px -75px;
+                  }
+              }
+
+              &#email {
+                  background-position: -300px 0px;
+                  &:hover {
+                      background-position: -300px -75px;
+                  }
+              }
+
+
+          }
+      }
+  }
 }
 
-.title {
-  font-family: 'Permanent Marker', arial, serif;
-  padding-top: 4%;
-  line-height: 50pt;
-  font-size: 50pt;
-  color: #844700;
-  text-align: center;
-  text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+.header {
+  .title {
+    font-family: 'Permanent Marker', arial, serif;
+    padding-top: 4%;
+    line-height: 50pt;
+    font-size: 50pt;
+    color: #844700;
+    text-align: center;
+    text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+  }
 }
 
 .about {
@@ -111,77 +187,33 @@ a {
     }
 }
 
-ul {
-    height: 75px;
-    padding: 7px;
-    display: inline-block;
-    background-color: #BF8A30;
-    text-align: center;
-    margin-top: 20px;
-    list-style-type: none;
+.resume {
+  padding-top: 15px;
+  padding-bottom: 15px;
 
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+  .summary {
+  }
 
-    -webkit-box-shadow: inset 0px 0px 5px 3px #8C5700;
-    -moz-box-shadow: inset 0px 0px 5px 3px #8C5700;
-    box-shadow: inset 0px 0px 5px 3px #8C5700;
+  .objective {
+  }
 
-    li {
-        display: inline-block;
-        width: 75px;
-        height: 75px;
-        margin-left: 10px;
+  .experience {
+    .job {
+      padding-top: 30px;
 
-        &:first-child {
-            margin-left: 0px;
+      .time {
+        .start:after {
+          content: ' - ';
         }
+        float: right;
+      }
 
-        a {
-            display: block;
-            width: 100%;
-            height: 100%;
-            background-position: 0px 0px;
-            background: url(/images/icons.png) no-repeat;
-
-
-            &#googleplus {
-                background-position: 0px 0px;
-                &:hover {
-                    background-position: 0px -75px;
-                }
-            }
-
-            &#linkedin {
-                background-position: -75px 0px;
-                &:hover {
-                    background-position: -75px -75px;
-                }
-            }
-
-            &#twitter {
-                background-position: -150px 0px;
-                &:hover {
-                    background-position: -150px -75px;
-                }
-            }
-
-            &#github {
-                background-position: -225px 0px;
-                &:hover {
-                    background-position: -225px -75px;
-                }
-            }
-
-            &#email {
-                background-position: -300px 0px;
-                &:hover {
-                    background-position: -300px -75px;
-                }
-            }
-
-
-        }
+      .title {
+        font-weight: bold;
+      }
+      .employer {
+        font-weight: bold;
+      }
     }
+  }
 }

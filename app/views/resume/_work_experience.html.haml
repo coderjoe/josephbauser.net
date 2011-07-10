@@ -1,0 +1,13 @@
+- experience.each do |work|
+  .job
+    .time
+      %span.start= work['start']
+      %span.end= work['end'] || 'Current'
+    .employer= work['label']
+    .title= work['title']
+    .location= work['location']
+    .description
+      %ul
+        - work['description'].each do |desc|
+          %li= desc
+    .links
