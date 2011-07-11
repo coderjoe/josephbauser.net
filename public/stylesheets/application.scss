@@ -39,6 +39,8 @@ a {
   background-color: #A66900;
   border-top: 1px solid #BF8A30;
   text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   ul {
       height: 75px;
@@ -46,7 +48,6 @@ a {
       display: inline-block;
       background-color: #BF8A30;
       text-align: center;
-      margin-top: 20px;
       list-style-type: none;
 
       -webkit-border-radius: 5px;
@@ -113,7 +114,7 @@ a {
 
           }
       }
-  }
+   }
 }
 
 .header {
@@ -188,32 +189,94 @@ a {
 }
 
 .resume {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
   padding-top: 15px;
   padding-bottom: 15px;
 
-  .summary {
+  h2 {
+    font-family: 'Permanent Marker', arial, serif;
+    text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+  
+    font-size: 20pt;
+    margin-top: 20px;
+
+    border-bottom: 1px solid black;
+
+    &:first-child {
+        margin-top: 0px;
+    }
+  }
+
+  p {
+      padding-top: 20px;
+  }
+
+  ul {
+    padding-left: 30px;
+
+    li {
+      list-style-type: disc;
+    }
+  }
+
+  .summary, .activities {
+    font-size: 13pt;
   }
 
   .objective {
   }
+  
+  .time {
+    .start:after {
+      content: ' - ';
+    }
+    float: right;
+  }
+
+  .section {
+    border-bottom: 1px solid #A66900;
+
+    &:after {
+      margin-top: 10px;
+      display: block;
+      content: ' ';
+      height: 1px;
+      background-color: #BF8A30;
+    }
+
+    &:last-child {
+      border: none;
+
+      &:after {
+          display: none;
+      }
+    }
+  }
 
   .experience {
     .job {
-      padding-top: 30px;
+      margin-bottom: 10px;
+      
+      .title, .employer {
+        font-weight: bold;
+      }
+    }
+  }
 
-      .time {
-        .start:after {
-          content: ' - ';
+  .education {
+    .institution, .degree {
+      font-weight: bold;
+    }
+
+    .activities {
+        &:before {
+            margin-top: 10px;
+            display: block;
+            content: 'Activities: ';
         }
-        float: right;
-      }
-
-      .title {
-        font-weight: bold;
-      }
-      .employer {
-        font-weight: bold;
-      }
     }
   }
 }

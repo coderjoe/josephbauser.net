@@ -29,6 +29,7 @@ GEM
       activesupport (= 3.0.9)
     activesupport (3.0.9)
     arel (2.0.10)
+    bluecloth (2.1.0)
     builder (2.1.2)
     capistrano (2.6.0)
       highline
@@ -98,6 +99,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bluecloth (~> 2.0)
   capistrano
   haml (~> 3.1.2)
   haml-rails (~> 0.3.4)

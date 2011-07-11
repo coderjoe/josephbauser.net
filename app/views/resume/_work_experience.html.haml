@@ -1,13 +1,11 @@
 - experience.each do |work|
-  .job
+  .job.section
     .time
-      %span.start= work['start']
-      %span.end= work['end'] || 'Current'
-    .employer= work['label']
-    .title= work['title']
-    .location= work['location']
-    .description
-      %ul
-        - work['description'].each do |desc|
-          %li= desc
-    .links
+      %span.start= "#{Date::MONTHNAMES[work.start_month]} #{work.start_year}"
+      - if work.end_year != 0
+        %span.end= "#{Date::MONTHNAMES[work.end_month]} #{work.end_year}"
+      - else
+        %span.end Present
+    .employer= work.company.name
+    .title= work.title
+    .summary= BlueCloth.new(work.summary).to_html.html_safe

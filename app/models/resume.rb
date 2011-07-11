@@ -1,7 +1,7 @@
 class Resume
   FIELDS = [ :first_name, :last_name, :summary, :educations, 
             :positions, :picture_url, :headline, :location, 
-            :site_standard_profile_request ] 
+            :skills, :site_standard_profile_request ] 
 
   def initialize
     @resume = LINKEDIN_CLIENT.profile( 

@@ -1,9 +1,10 @@
 = render :partial => 'shared/navigation'
 .resume
   %h2 Summary
-  .summary= @summary
-  %h2 Objective
-  .objective= @objective
+  .summary= @summary.html_safe
+  %h2 Education
+  .education
+    = render :partial => 'education', :locals => { :education => @education }
   %h2 Work Experience
   .experience
     .work

@@ -1,0 +1,11 @@
+- education.each do |school|
+  .school.section
+    .time
+      %span.start= "#{Date::MONTHNAMES[school.start_month]} #{school.start_year}"
+      - if school.end_year != 0
+        %span.end= "#{Date::MONTHNAMES[school.end_month]} #{school.end_year}"
+      - else
+        %span.end Present
+    .institution= school.school_name
+    .degree #{school.degree} #{school.field_of_study}
+    .activities= school.activities
