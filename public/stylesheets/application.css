@@ -47,7 +47,9 @@ a {
       display: inline-block;
       width: 75px;
       height: 75px;
-      margin-left: 10px; }
+      margin-left: 10px;
+      zoom: 1;
+      *display: inline; }
       .footer ul li:first-child {
         margin-left: 0px; }
       .footer ul li a {
