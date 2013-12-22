@@ -10,7 +10,7 @@ gem 'haml', '~> 3.1.2'
 gem 'haml-rails', '~> 0.3.4'
 gem 'sass', '~> 3.1.3'
 
-gem 'vcard', '~> 0.1.1'
+gem 'vcard'
 gem 'linkedin', '~> 0.2.2'
 gem 'bluecloth', '~> 2.0'
 
