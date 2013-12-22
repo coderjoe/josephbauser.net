@@ -1,4 +1,3 @@
-
 require "bundler/capistrano"
 
 set :user, 'coderjoe'
@@ -32,5 +31,5 @@ end
 
 after "deploy:finalize_update", "symlink:keys_yml"
 
-default_environment['PATH']="/usr/lib/ruby/gems/1.8/bin:/home/#{user}/.gems/bin:/usr/local/bin:/usr/bin:/bin"
+#default_environment['PATH']="/usr/lib/ruby/gems/1.8/bin:/home/#{user}/.gems/bin:/usr/local/bin:/usr/bin:/bin"
 #default_environment['GEM_PATH']="/home/#{user}/.gems:/usr/lib/ruby/gems/1.8"

@@ -4,7 +4,7 @@ gem 'rack', '1.2.1'
 gem 'rails', '3.0.9'
 
 # Deploy with Capistrano
-gem 'capistrano'
+gem 'capistrano', '~> 2'
 
 gem 'haml', '~> 3.1.2'
 gem 'haml-rails', '~> 0.3.4'
