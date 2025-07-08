@@ -28,7 +28,7 @@ google_analytics_id:
 title: "josephbauser.net"
 
 # Avatar image path
-avatar: "./images/pixeltar-semitransparent.png"
+avatar: "images/pixeltar-semitransparent.png"
 
 # Name section text
 name: "@coderjoe"
