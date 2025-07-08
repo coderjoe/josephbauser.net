@@ -1,15 +1,13 @@
-name: 'Automatic build'
+name: 'Build and Deploy'
 on:
   push:
     branches:
       - main
+      - master
     paths-ignore:
       - .gitignore
       - README.md
       - LICENSE
-  workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight (00:00 UTC)
     
 jobs:
   continuous-delivery:
