@@ -24,6 +24,9 @@ plugins:
 # Google Analytics tracking id
 google_analytics_id: G-W5Z6B16L3C
 
+# Goatcounter tracking id
+goatcounter_id: josephbauser-net
+
 # HTML Title
 title: "josephbauser.net"
 
