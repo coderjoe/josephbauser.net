@@ -70,6 +70,7 @@ if !settings["links"].nil?
     settings["links"][index]["link"]["alt"] = Liquid::Template.parse(settings["links"][index]["link"]["alt"]).render(settings)
     settings["links"][index]["link"]["title"] = Liquid::Template.parse(settings["links"][index]["link"]["title"]).render(settings)
     settings["links"][index]["link"]["text"] = Liquid::Template.parse(settings["links"][index]["link"]["text"]).render(settings)
+    settings["links"][index]["link"]["rel"] = Liquid::Template.parse(settings["links"][index]["link"]["rel"]).render(settings)
   end
 end
 
@@ -79,6 +80,7 @@ if !settings["socials"].nil?
     settings["socials"][index]["social"]["url"] = Liquid::Template.parse(settings["socials"][index]["social"]["url"]).render(settings)
     settings["socials"][index]["social"]["alt"] = Liquid::Template.parse(settings["socials"][index]["social"]["alt"]).render(settings)
     settings["socials"][index]["social"]["title"] = Liquid::Template.parse(settings["socials"][index]["social"]["title"]).render(settings)
+    settings["socials"][index]["social"]["rel"] = Liquid::Template.parse(settings["socials"][index]["social"]["rel"]).render(settings)
   end
 end
 
