@@ -1,4 +1,4 @@
-name: 'Build and Deploy'
+name: "Build and Deploy"
 on:
   push:
     branches:
@@ -8,17 +8,33 @@ on:
       - .gitignore
       - README.md
       - LICENSE
-    
-jobs:
-  continuous-delivery:
 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -26,5 +42,21 @@ jobs:
           ruby-version: 3.4.4
           bundler-cache: true
 
-      - name: Deploy
-        run: bash deploy.sh
+      - name: Build site
+        run: bundle exec ruby scaffold.rb
+        
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "_output/"
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
